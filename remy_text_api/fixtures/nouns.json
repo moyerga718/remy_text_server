@@ -1,0 +1,121 @@
+[
+    {
+        "model": "remy_text_api.noun",
+        "pk": 1,
+        "fields": {
+            "text": "north"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 2,
+        "fields": {
+            "text": "east"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 3,
+        "fields": {
+            "text": "south"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 4,
+        "fields": {
+            "text": "west"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 5,
+        "fields": {
+            "text": "back"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 6,
+        "fields": {
+            "text": "dock"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 7,
+        "fields": {
+            "text": "car"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 8,
+        "fields": {
+            "text": "clock"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 9,
+        "fields": {
+            "text": "time"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 10,
+        "fields": {
+            "text": "coat"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 11,
+        "fields": {
+            "text": "pipe"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 12,
+        "fields": {
+            "text": "lockbox"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 13,
+        "fields": {
+            "text": "bobbypin"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 14,
+        "fields": {
+            "text": "object"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 15,
+        "fields": {
+            "text": "bean"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 16,
+        "fields": {
+            "text": "trunk"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 17,
+        "fields": {
+            "text": "pvc"
+        }
+    }
+]

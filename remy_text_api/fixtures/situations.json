@@ -1,0 +1,66 @@
+[
+    {
+        "model": "remy_text_api.situation",
+        "pk": 1,
+        "fields": {
+            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back to you. It's foggy, but you can see there is a dock to the north of you. As you bring the black SUV to a stop, you hear a rustling coming from the trunk. The clock on the dashboard reads 2:14.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 2,
+        "fields": {
+            "text": "You search the trunk of the car. You see some old coats, a few PVC pipes, and a lockbox.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 3,
+        "fields": {
+            "text": "You are standing on the dock facing north, looking out on a large fjord. The eastern and western sides of the ford are bordered by north-south trending mountain ranges. A cherry red plane is wrecked in the water about 1 km north of you. Much further to the north, you see a glacier that seems to be supplying water to the fjord. You see a pile of bobby pins at the edge of the dock. The smell of the sea is in the air. It is cold.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 4,
+        "fields": {
+            "text": "You reach out to touch the clock and your hand passes through it like it isn’t there. You can’t see whats on the other side, but it feels like you've slipped your hand into a vat of warm molasses. Your hand wraps around a small, solid object amidst the squish.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 5,
+        "fields": {
+            "text": "You are standing outside of the car. You can read the clock from the outside of the car. It reads 11:59.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 6,
+        "fields": {
+            "text": "You pull your hand out from the dashboard. You open up your fist and find a canine tooth in the palm of your hand. Your head starts to hurt and your vision goes black for a moment. You are standing next to the car. The clock reads 7:00.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 7,
+        "fields": {
+            "text": "You manage to pick the lockbox with the bobbypin. There is a single bean inside.",
+            "location": "South Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 1000,
+        "fields": {
+            "text": "DUMMY SITUATION, DUMMY. YOU FOUND HELL",
+            "location": "HELL"
+        }
+    }
+]

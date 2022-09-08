@@ -1,0 +1,107 @@
+[
+    {
+        "model": "remy_text_api.verb",
+        "pk": 1,
+        "fields": {
+            "text": "go"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 2,
+        "fields": {
+            "text": "check"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 3,
+        "fields": {
+            "text": "search"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 4,
+        "fields": {
+            "text": "make"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 5,
+        "fields": {
+            "text": "exit"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 6,
+        "fields": {
+            "text": "leave"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 7,
+        "fields": {
+            "text": "take"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 8,
+        "fields": {
+            "text": "open"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 9,
+        "fields": {
+            "text": "use"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 10,
+        "fields": {
+            "text": "look"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 11,
+        "fields": {
+            "text": "walk"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 12,
+        "fields": {
+            "text": "read"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 13,
+        "fields": {
+            "text": "get"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 14,
+        "fields": {
+            "text": "grab"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 15,
+        "fields": {
+            "text": "unlock"
+        }
+    }
+]
