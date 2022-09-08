@@ -1,0 +1,83 @@
+[
+    {
+        "model": "remy_text_api.item",
+        "pk": 1,
+        "fields": {
+            "name": "Photo",
+            "description": "Photo of Sam. There's a note on the back: 'Remember, if you get nervous, just pretend I'm in the front row :)'",
+            "starting_item": true
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 2,
+        "fields": {
+            "name": "Hook",
+            "description": "Large metal hook. Probably used in a meat factory or for commercial fishing.",
+            "starting_item": true
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 3,
+        "fields": {
+            "name": "Ticket",
+            "description": "Untorn orange ticket. Reminds you of riding The Zipper at the county fair.",
+            "starting_item": true
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 4,
+        "fields": {
+            "name": "Coat",
+            "description": "Old goosedown coat. Looks awful, smells worse.... very warm.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 5,
+        "fields": {
+            "name": "Pipe",
+            "description": "White PVC pipe, capped on both ends. Covered in TSA stickers. How many conferences did this thing go to?",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 6,
+        "fields": {
+            "name": "Bobbypin",
+            "description": "Bent bobbypin. Used for styling hair, or other nefarious activities.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 7,
+        "fields": {
+            "name": "Tooth",
+            "description": "Human canine tooth. Surprisingly large. You start thinking of red kites and summer sun.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 8,
+        "fields": {
+            "name": "Bean",
+            "description": "Single bean. You could do a lot with this.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 999,
+        "fields": {
+            "name": "NULL ITEM",
+            "description": "NULL ITEM",
+            "starting_item": false
+        }
+    }
+]

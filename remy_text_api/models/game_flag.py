@@ -5,5 +5,5 @@ class GameFlag(models.Model):
     to make sure you can't do the same major event twice."""
 
     game = models.ForeignKey("Game", on_delete=models.CASCADE, related_name="game_flags")
-    situation_verb_noun = models.ForeignKey("SituationVerbNoun", on_delete=models.CASCADE, related_name="game_flags")
+    action = models.ForeignKey("Action", on_delete=models.CASCADE, related_name="game_flags", default= 1)
     completed = models.BooleanField(default=False) 

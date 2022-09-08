@@ -1,0 +1,172 @@
+[
+    {
+        "model": "remy_text_api.action",
+        "pk": 1,
+        "fields": {
+            "situation": 1,
+            "verbs": [2,3,10],
+            "nouns": [7,16],
+            "new_situation_bool": true,
+            "new_situation": 2,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 2,
+        "fields": {
+            "situation": 1,
+            "verbs": [11,1],
+            "nouns": [1,6],
+            "new_situation_bool": true,
+            "new_situation": 3,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 3,
+        "fields": {
+            "situation": 1,
+            "verbs": [2,10,12],
+            "nouns": [8],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "response": "It is 2:30.",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 4,
+        "fields": {
+            "situation": 1,
+            "verbs": [4],
+            "nouns": [9],
+            "new_situation_bool": true,
+            "new_situation": 4,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 5,
+        "fields": {
+            "situation": 1,
+            "verbs": [5,6],
+            "nouns": [7],
+            "new_situation_bool": true,
+            "new_situation": 5,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 6,
+        "fields": {
+            "situation": 2,
+            "verbs": [7,13,14],
+            "nouns": [10],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "response": "Coat taken.",
+            "get_item_bool": true,
+            "new_item": 4,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 7,
+        "fields": {
+            "situation": 2,
+            "verbs": [7,13,14],
+            "nouns": [11,17],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "response": "PVC pipe taken.",
+            "get_item_bool": true,
+            "new_item": 5,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 8,
+        "fields": {
+            "situation": 2,
+            "verbs": [11,1],
+            "nouns": [1,6],
+            "new_situation_bool": true,
+            "new_situation": 3,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 9,
+        "fields": {
+            "situation": 2,
+            "verbs": [15],
+            "nouns": [12],
+            "new_situation_bool": true,
+            "new_situation": 7,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": true,
+            "required_item": 6,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 10,
+        "fields": {
+            "situation": 2,
+            "verbs": [15],
+            "nouns": [12],
+            "new_situation_bool": true,
+            "new_situation": 7,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": true,
+            "required_item": 6,
+            "important": true
+        }
+    }
+]
