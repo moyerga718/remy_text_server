@@ -15,7 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from xml.etree.ElementInclude import include
+from django.contrib import admin
+from django.conf.urls import include
+from django.urls import path
+from rest_framework import routers
+
+from remy_text_api.views import login_user, register_user
+from remy_text_api.views import GameFlagView
+from remy_text_api.views import GameView
+from remy_text_api.views import ItemView
+
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'game_flags', GameFlagView, 'game_flag')
+router.register(r'games', GameView, 'game')
+router.register(r'items', ItemView, 'item')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register', register_user),
+    path('login', login_user),
+    path('', include(router.urls))
 ]

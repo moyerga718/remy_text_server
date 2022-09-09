@@ -6,6 +6,9 @@ from rest_framework.decorators import action
 from django.contrib.auth.models import User
 
 from remy_text_api.models import Game
+from remy_text_api.models import Action
+from remy_text_api.models import Situation
+from remy_text_api.models import GameFlag
 from remy_text_api.serializers import GameSerializer
 
 class GameView(ViewSet):
@@ -18,28 +21,26 @@ class GameView(ViewSet):
         return Response(serializer.data)
 
     def create(self, request):
-        """Method for creating a game. THIS ALL NEEDS TO CHANGE :)))))"""
+        """Method for creating a game."""
 
-        """
         user = request.auth.user
-        important_choices = Choice.objects.filter(important = True)
+        important_actions = Action.objects.filter(important = True)
         current_situation = Situation.objects.get(pk = 1)
-        character = Character.objects.create(
+        game = Game.objects.create(
             user = user,
             first_name = request.data['first_name'],
             current_situation = current_situation,
         )
-        character.items.add(*request.data['items'])
-        for choice in important_choices:
-            CharacterChoice.objects.create(
-                character = character,
-                choice = choice,
-                chosen = False
+        game.items.add(*request.data['items'])
+        for action in important_actions:
+            GameFlag.objects.create(
+                game = game,
+                action = action,
+                completed = True
         )
 
-        serializer = CharacterSerializer(character)
+        serializer = GameSerializer(game)
         return Response(serializer.data)
-        """
     
     def update(self, request, pk):
         """method for updating a game. THIS ALL NEEDS TO CHANGE :)))"""
@@ -80,7 +81,7 @@ class GameView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
     @action(methods = ['get'], detail = False, url_path='my_games')
-    def my_characters(self, request):
+    def my_games(self, request):
         user = request.auth.user
         my_games = Game.objects.filter(user = user)
         serializer = GameSerializer(my_games, many = True)
