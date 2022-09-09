@@ -156,17 +156,221 @@
         "model": "remy_text_api.action",
         "pk": 10,
         "fields": {
-            "situation": 2,
-            "verbs": [15],
-            "nouns": [12],
+            "situation": 3,
+            "verbs": [7,13,14],
+            "nouns": [13],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "response": "Bobbypin taken",
+            "get_item_bool": true,
+            "new_item": 6,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 11,
+        "fields": {
+            "situation": 3,
+            "verbs": [11,1],
+            "nouns": [3,7,5],
             "new_situation_bool": true,
-            "new_situation": 7,
+            "new_situation": 5,
             "response": "",
             "get_item_bool": false,
             "new_item": 999,
-            "required_item_bool": true,
-            "required_item": 6,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 12,
+        "fields": {
+            "situation": 4,
+            "verbs": [7,13,14],
+            "nouns": [14],
+            "new_situation_bool": true,
+            "new_situation": 6,
+            "response": "",
+            "get_item_bool": true,
+            "new_item": 7,
+            "required_item_bool": false,
+            "required_item": 999,
             "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 13,
+        "fields": {
+            "situation": 4,
+            "verbs": [11,1],
+            "nouns": [5],
+            "new_situation_bool": true,
+            "new_situation": 5,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 14,
+        "fields": {
+            "situation": 5,
+            "verbs": [11,1],
+            "nouns": [1,6],
+            "new_situation_bool": true,
+            "new_situation": 3,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 15,
+        "fields": {
+            "situation": 5,
+            "verbs": [2,3,10],
+            "nouns": [7,16],
+            "new_situation_bool": true,
+            "new_situation": 2,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 16,
+        "fields": {
+            "situation": 5,
+            "verbs": [2,10,12],
+            "nouns": [8],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "response": "It is 10:59.",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 17,
+        "fields": {
+            "situation": 5,
+            "verbs": [4],
+            "nouns": [9],
+            "new_situation_bool": true,
+            "new_situation": 4,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 18,
+        "fields": {
+            "situation": 6,
+            "verbs": [11,1],
+            "nouns": [1,6],
+            "new_situation_bool": true,
+            "new_situation": 3,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 19,
+        "fields": {
+            "situation": 6,
+            "verbs": [2,3,10],
+            "nouns": [7,16],
+            "new_situation_bool": true,
+            "new_situation": 2,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 20,
+        "fields": {
+            "situation": 7,
+            "verbs": [7,13,14],
+            "nouns": [15],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "response": "Bean taken. Congratulations.",
+            "get_item_bool": true,
+            "new_item": 8,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 21,
+        "fields": {
+            "situation": 7,
+            "verbs": [1],
+            "nouns": [5],
+            "new_situation_bool": true,
+            "new_situation": 5,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 22,
+        "fields": {
+            "situation": 7,
+            "verbs": [11,1],
+            "nouns": [1,6],
+            "new_situation_bool": true,
+            "new_situation": 3,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false
         }
     }
 ]

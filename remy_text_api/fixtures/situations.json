@@ -27,7 +27,7 @@
         "model": "remy_text_api.situation",
         "pk": 4,
         "fields": {
-            "text": "You reach out to touch the clock and your hand passes through it like it isn’t there. You can’t see whats on the other side, but it feels like you've slipped your hand into a vat of warm molasses. Your hand wraps around a small, solid object amidst the squish.",
+            "text": "You reach out to touch the clock and your hand passes through it like it isn’t there. You can’t see whats on the other side, but it feels like you've slipped your hand into a vat of warm molasses. You feel a small solid object amidst the goo.",
             "location": "South Shore"
         }
     },
