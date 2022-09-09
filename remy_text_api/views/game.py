@@ -86,3 +86,23 @@ class GameView(ViewSet):
         my_games = Game.objects.filter(user = user)
         serializer = GameSerializer(my_games, many = True)
         return Response(serializer.data)
+
+    @action(methods = ['put'], detail=True)
+    def handle_action(self, request, pk):
+
+        #get game
+        game = Game.objects.get(pk = pk)
+
+        #get situation
+        situation = Situation.objects.get(pk = request.data['situationId'])
+
+        #Split text string into an array containing individual words
+        action_text = request.data['actionText']
+        action_text_array = action_text.split(" ")
+
+        if len(action_text_array) is 2:
+            return Response({'message': 'VALID INPUT'}, status=status.HTTP_204_NO_CONTENT)
+        else:
+            return Response({'message': 'Invalid input. Submit verb + noun combination.'}, status=status.HTTP_204_NO_CONTENT)
+           
+
