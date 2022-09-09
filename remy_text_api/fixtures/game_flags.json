@@ -1,0 +1,74 @@
+[
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 1,
+        "fields": {
+            "game": 1,
+            "action": 4,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 2,
+        "fields": {
+            "game": 1,
+            "action": 6,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 3,
+        "fields": {
+            "game": 1,
+            "action": 7,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 4,
+        "fields": {
+            "game": 1,
+            "action": 9,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 5,
+        "fields": {
+            "game": 1,
+            "action": 10,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 6,
+        "fields": {
+            "game": 1,
+            "action": 12,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 7,
+        "fields": {
+            "game": 1,
+            "action": 17,
+            "completed": false
+        }
+    },
+    {
+        "model": "remy_text_api.gameflag",
+        "pk": 8,
+        "fields": {
+            "game": 1,
+            "action": 20,
+            "completed": false
+        }
+    }
+]
