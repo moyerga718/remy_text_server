@@ -9,7 +9,11 @@ from remy_text_api.models import Game
 from remy_text_api.models import Action
 from remy_text_api.models import Situation
 from remy_text_api.models import GameFlag
+from remy_text_api.models import Verb
+from remy_text_api.models import Noun
+from remy_text_api.models import Item
 from remy_text_api.serializers import GameSerializer
+from remy_text_api.serializers import ActionSerializer
 
 class GameView(ViewSet):
     
@@ -89,20 +93,84 @@ class GameView(ViewSet):
 
     @action(methods = ['put'], detail=True)
     def handle_action(self, request, pk):
+        """This method handles the user submitting a text-based reaction for a situation. It is expecting to receive a string called "actionText" and an integer called 
+        'situationId' in the request body. It is also expecting to receive the game primary key in the url. 
 
-        #get game
+        This method does the following:
+        1. Get current game object
+        2. Get current situation object
+        3. Determine whether or not the submitted text is a valid input:
+            a. Split text string into several strings by space character. This will result in an array with several strings that each contain one word.
+            b. Since actions can only be two words (verb + noun combo), check to make sure array length is only two. If it is not, send response saying 
+            "invalid input - must be two words"
+            c. See if there is a verb object and a noun object that have matching text properties that match the submitted verb/noun strings. If not, send
+            back response that says "Unrecognized verb/noun".
+            d. if verb and noun objects are found, continue to next step.
+        4. Check to see if the submitted action is an accepted action for the current situation:
+            a. Search for an action object for the current situation that has found verb + noun objects in its verbs/nouns many to many array.
+            b. If an object isn't found, respond with "You can't do that here."
+        5. Check to see if character must have a specific item in their inventory to complete this action.
+        6. Check to see if this action is a one-time action that has already been completed: 
+            a. Search for game flag object associated with found action
+            b. Check to see if it has already been completed. If so, return message saying "You've already done that".
+            c. If it has not been completed,
+        """
+
+        #1
         game = Game.objects.get(pk = pk)
 
-        #get situation
+        #2
         situation = Situation.objects.get(pk = request.data['situationId'])
 
-        #Split text string into an array containing individual words
+        #3a
         action_text = request.data['actionText']
         action_text_array = action_text.split(" ")
 
-        if len(action_text_array) is 2:
-            return Response({'message': 'VALID INPUT'}, status=status.HTTP_204_NO_CONTENT)
-        else:
+        #3b
+        if len(action_text_array) is not 2:
             return Response({'message': 'Invalid input. Submit verb + noun combination.'}, status=status.HTTP_204_NO_CONTENT)
-           
+
+        #3c
+        try:
+            verb = Verb.objects.get(text = action_text_array[0].lower())
+        except: 
+            return Response({'message': 'Unrecognized verb.'}, status=status.HTTP_204_NO_CONTENT)
+
+        try:
+            noun = Noun.objects.get(text = action_text_array[1].lower())
+        except: 
+            return Response({'message': 'Unrecognized noun.'}, status=status.HTTP_204_NO_CONTENT)
+
+        #4a
+        try: 
+            found_action = Action.objects.get(situation = situation, verbs = verb, nouns = noun)
+            # serializer = ActionSerializer(found_action)
+            # return Response(serializer.data)
+        #4b
+        except:
+            return Response({'message': "You can't do that here."}, status=status.HTTP_204_NO_CONTENT)
+
+        #5a
+        if found_action.required_item_bool is True:
+            try:
+                item = Item.objects.get(pk = found_action.required_item_id, pk__in = game.items.all())
+                # return Response({'message': "You have the item needed for this."}, status=status.HTTP_204_NO_CONTENT)
+            except: 
+                return Response({'message': "You don't have the item required for this."}, status=status.HTTP_204_NO_CONTENT)
+
+        #6a
+        try:
+            game_flag = GameFlag.objects.get( action = found_action)
+            #6b
+            if game_flag.completed is True:
+                return Response({'message': "You've already done that."}, status=status.HTTP_204_NO_CONTENT)
+        except: 
+            pass
+
+
+
+        
+        
+        return Response({'message': 'Passed test so far, keep writing that shit'}, status=status.HTTP_204_NO_CONTENT)
+
 
