@@ -13,7 +13,8 @@ from remy_text_api.models import Verb
 from remy_text_api.models import Noun
 from remy_text_api.models import Item
 from remy_text_api.serializers import GameSerializer
-from remy_text_api.serializers import ActionSerializer
+from remy_text_api.serializers import GameFlagIdSerializer
+from remy_text_api.serializers import ActionResponseSerializer
 
 class GameView(ViewSet):
     
@@ -40,44 +41,12 @@ class GameView(ViewSet):
             GameFlag.objects.create(
                 game = game,
                 action = action,
-                completed = True
+                completed = False
         )
 
         serializer = GameSerializer(game)
         return Response(serializer.data)
     
-    def update(self, request, pk):
-        """method for updating a game. THIS ALL NEEDS TO CHANGE :)))"""
-
-        """update character. This will be called whenever a choice is selected for a situation.
-        Along with characterId, client will also be sending outcomeId (resulting situation) and 
-        possibly itemId (if character gets a new item from the choice) as query parameters.
-        """
-
-        """
-        
-        #Get character
-        character = Character.objects.get(pk = pk)
-
-        #get data from query parameters
-        outcomeId = request.query_params.get('outcome', None)
-        itemId = request.query_params.get('item', None)
-
-        #get situation object based on outcome id. This call will always have this query parameter, so no need for if statement
-        new_situation = Situation.objects.get(pk = outcomeId)
-        character.current_situation = new_situation
-
-        #If url has itemId query parameter... 
-        if itemId is not None: 
-            #add that item to character
-            # item = Item.objects.get(pk = itemId)
-            character.items.add(itemId)
-
-        #save the character.
-        character.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
-        """
-
     def destroy(self, request, pk):
         """delete game"""
         game = Game.objects.get(pk = pk)
@@ -109,11 +78,24 @@ class GameView(ViewSet):
         4. Check to see if the submitted action is an accepted action for the current situation:
             a. Search for an action object for the current situation that has found verb + noun objects in its verbs/nouns many to many array.
             b. If an object isn't found, respond with "You can't do that here."
-        5. Check to see if character must have a specific item in their inventory to complete this action.
+        5. Check to see if character must have a specific item in their inventory to complete this action:
+            a. If required_item_bool is true, see if that item is in the game's inventory
+            b. If user does not have this item in this game yet, return a response saying "You don't have the item required"
         6. Check to see if this action is a one-time action that has already been completed: 
             a. Search for game flag object associated with found action
             b. Check to see if it has already been completed. If so, return message saying "You've already done that".
-            c. If it has not been completed,
+            c. If it has not been completed, mark game flag object as completed and continue. 
+        7. If player receives an item by completing this action, add that item to their inventory:
+            a. See if get_item_bool on action is true or false.
+            b. if true, find item object and add that item to game.items.
+        8. Check to see if the character goes to a new situation after performing this action
+            a. See if new_situation_bool is true or false.
+            b. if true, get new situation object using new_situation_id on action and update it on game object
+        9. Time to package up all necessary data and send it back to client in response. We need:
+            a. Game data (now possibly updated with new situation object and new item object.)
+            b. id of game flag that was marked true (if flag was marked true)
+            c. Response from action object.
+            d. boolean saying that action was completed. 
         """
 
         #1
@@ -126,51 +108,88 @@ class GameView(ViewSet):
         action_text = request.data['actionText']
         action_text_array = action_text.split(" ")
 
+        #Dictionary that will be sent as a response whenever action can't be completed. Message object will be updated with appropriate text prior to sending response. 
+        response_data = {
+            "action_completed": False,
+            "message": ""
+        }
+
         #3b
-        if len(action_text_array) is not 2:
-            return Response({'message': 'Invalid input. Submit verb + noun combination.'}, status=status.HTTP_204_NO_CONTENT)
+        if len(action_text_array) != 2:
+            response_data["message"] = "Invalid input. Submit verb + noun combination."
+            return Response(response_data)
 
         #3c
         try:
             verb = Verb.objects.get(text = action_text_array[0].lower())
         except: 
-            return Response({'message': 'Unrecognized verb.'}, status=status.HTTP_204_NO_CONTENT)
+            response_data["message"] = "Unrecognized verb."
+            return Response(response_data)
 
         try:
             noun = Noun.objects.get(text = action_text_array[1].lower())
         except: 
-            return Response({'message': 'Unrecognized noun.'}, status=status.HTTP_204_NO_CONTENT)
+            response_data["message"] = "Unrecognized noun."
+            return Response(response_data)
 
         #4a
         try: 
             found_action = Action.objects.get(situation = situation, verbs = verb, nouns = noun)
-            # serializer = ActionSerializer(found_action)
-            # return Response(serializer.data)
         #4b
         except:
-            return Response({'message': "You can't do that here."}, status=status.HTTP_204_NO_CONTENT)
+            response_data["message"] = "You can't do that here."
+            return Response(response_data)
 
-        #5a
+        #5
         if found_action.required_item_bool is True:
+            #5a
             try:
-                item = Item.objects.get(pk = found_action.required_item_id, pk__in = game.items.all())
-                # return Response({'message': "You have the item needed for this."}, status=status.HTTP_204_NO_CONTENT)
+                req_item = Item.objects.get(pk = found_action.required_item_id, pk__in = game.items.all())
+            #5b
             except: 
-                return Response({'message': "You don't have the item required for this."}, status=status.HTTP_204_NO_CONTENT)
+                response_data["message"] = "You don't have the item required for this."
+                return Response(response_data)
 
         #6a
         try:
-            game_flag = GameFlag.objects.get( action = found_action)
+            game_flag = GameFlag.objects.get( action = found_action, game = game)
             #6b
             if game_flag.completed is True:
-                return Response({'message': "You've already done that."}, status=status.HTTP_204_NO_CONTENT)
+                response_data["message"] = "You've already done that."
+                return Response(response_data)
+            #6c
+            else:
+                game_flag.completed = True
+                game_flag.save()
         except: 
-            pass
+            game_flag = {}
 
+        #7a
+        if found_action.get_item_bool is True:
+            #7b
+            new_item = Item.objects.get(pk = found_action.new_item_id)
+            game.items.add(new_item)
+            game.save()
 
-
+        #8a
+        if found_action.new_situation_bool is True:
+            #8b
+            new_situation = Situation.objects.get(pk = found_action.new_situation_id)
+            game.current_situation = new_situation
+            game.save()
         
-        
-        return Response({'message': 'Passed test so far, keep writing that shit'}, status=status.HTTP_204_NO_CONTENT)
+        #9
+        game_serializer = GameSerializer(game)
+        game_flag_serializer = GameFlagIdSerializer(game_flag)
+        found_action_serializer = ActionResponseSerializer(found_action)
+
+        response_data = {
+            "action_completed": True,
+            "game_data": game_serializer.data,
+            "completed_game_flag_id": game_flag_serializer.data,
+            "action_response": found_action_serializer.data
+        }
+
+        return Response(response_data)
 
 
