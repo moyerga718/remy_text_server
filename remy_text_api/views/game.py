@@ -16,8 +16,9 @@ from remy_text_api.serializers import GameSerializer
 from remy_text_api.serializers import GameFlagIdSerializer
 from remy_text_api.serializers import ActionResponseSerializer
 
+
 class GameView(ViewSet):
-    
+
     def retrieve(self, request, pk):
         """Get single game"""
 
@@ -29,38 +30,38 @@ class GameView(ViewSet):
         """Method for creating a game."""
 
         user = request.auth.user
-        important_actions = Action.objects.filter(important = True)
-        current_situation = Situation.objects.get(pk = 1)
+        important_actions = Action.objects.filter(important=True)
+        current_situation = Situation.objects.get(pk=1)
         game = Game.objects.create(
-            user = user,
-            first_name = request.data['first_name'],
-            current_situation = current_situation,
+            user=user,
+            first_name=request.data['first_name'],
+            current_situation=current_situation,
         )
         game.items.add(*request.data['items'])
         for action in important_actions:
             GameFlag.objects.create(
-                game = game,
-                action = action,
-                completed = False
-        )
+                game=game,
+                action=action,
+                completed=False
+            )
 
         serializer = GameSerializer(game)
         return Response(serializer.data)
-    
+
     def destroy(self, request, pk):
         """delete game"""
-        game = Game.objects.get(pk = pk)
+        game = Game.objects.get(pk=pk)
         game.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-    @action(methods = ['get'], detail = False, url_path='my_games')
+    @action(methods=['get'], detail=False, url_path='my_games')
     def my_games(self, request):
         user = request.auth.user
-        my_games = Game.objects.filter(user = user)
-        serializer = GameSerializer(my_games, many = True)
+        my_games = Game.objects.filter(user=user)
+        serializer = GameSerializer(my_games, many=True)
         return Response(serializer.data)
 
-    @action(methods = ['put'], detail=True)
+    @action(methods=['put'], detail=True)
     def handle_action(self, request, pk):
         """This method handles the user submitting a text-based reaction for a situation. It is expecting to receive a string called "actionText" and an integer called 
         'situationId' in the request body. It is also expecting to receive the game primary key in the url. 
@@ -98,87 +99,90 @@ class GameView(ViewSet):
             d. boolean saying that action was completed. 
         """
 
-        #1
-        game = Game.objects.get(pk = pk)
+        # 1
+        game = Game.objects.get(pk=pk)
 
-        #2
-        situation = Situation.objects.get(pk = request.data['situationId'])
+        # 2
+        situation = Situation.objects.get(pk=request.data['situationId'])
 
-        #3a
+        # 3a
         action_text = request.data['actionText']
         action_text_array = action_text.split(" ")
 
-        #Dictionary that will be sent as a response whenever action can't be completed. Message object will be updated with appropriate text prior to sending response. 
+        # Dictionary that will be sent as a response whenever action can't be completed. Message object will be updated with appropriate text prior to sending response.
         response_data = {
             "action_completed": False,
             "message": ""
         }
 
-        #3b
+        # 3b
         if len(action_text_array) != 2:
             response_data["message"] = "Invalid input. Submit verb + noun combination."
             return Response(response_data)
 
-        #3c
+        # 3c
         try:
-            verb = Verb.objects.get(text = action_text_array[0].lower())
-        except: 
+            verb = Verb.objects.get(text=action_text_array[0].lower())
+        except:
             response_data["message"] = "Unrecognized verb."
             return Response(response_data)
 
         try:
-            noun = Noun.objects.get(text = action_text_array[1].lower())
-        except: 
+            noun = Noun.objects.get(text=action_text_array[1].lower())
+        except:
             response_data["message"] = "Unrecognized noun."
             return Response(response_data)
 
-        #4a
-        try: 
-            found_action = Action.objects.get(situation = situation, verbs = verb, nouns = noun)
-        #4b
+        # 4a
+        try:
+            found_action = Action.objects.get(
+                situation=situation, verbs=verb, nouns=noun)
+        # 4b
         except:
             response_data["message"] = "You can't do that here."
             return Response(response_data)
 
-        #5
+        # 5
         if found_action.required_item_bool is True:
-            #5a
+            # 5a
             try:
-                req_item = Item.objects.get(pk = found_action.required_item_id, pk__in = game.items.all())
-            #5b
-            except: 
+                req_item = Item.objects.get(
+                    pk=found_action.required_item_id, pk__in=game.items.all())
+            # 5b
+            except:
                 response_data["message"] = "You don't have the item required for this."
                 return Response(response_data)
 
-        #6a
+        # 6a
         try:
-            game_flag = GameFlag.objects.get( action = found_action, game = game)
-            #6b
+            game_flag = GameFlag.objects.get(action=found_action, game=game)
+            # 6b
             if game_flag.completed is True:
                 response_data["message"] = "You've already done that."
                 return Response(response_data)
-            #6c
+            # 6c
             else:
                 game_flag.completed = True
                 game_flag.save()
-        except: 
+        except:
             game_flag = {}
 
-        #7a
+        # 7a
         if found_action.get_item_bool is True:
-            #7b
-            new_item = Item.objects.get(pk = found_action.new_item_id)
+            # 7b
+            new_item = Item.objects.get(pk=found_action.new_item_id)
             game.items.add(new_item)
             game.save()
 
-        #8a
+        # 8a
         if found_action.new_situation_bool is True:
-            #8b
-            new_situation = Situation.objects.get(pk = found_action.new_situation_id)
+            # 8b
+            new_situation = Situation.objects.get(
+                pk=found_action.new_situation_id)
             game.current_situation = new_situation
             game.save()
-        
-        #9
+
+        # 9
         game_serializer = GameSerializer(game)
         game_flag_serializer = GameFlagIdSerializer(game_flag)
         found_action_serializer = ActionResponseSerializer(found_action)
@@ -191,5 +195,3 @@ class GameView(ViewSet):
         }
 
         return Response(response_data)
-
-
