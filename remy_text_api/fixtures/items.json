@@ -75,7 +75,7 @@
         "model": "remy_text_api.item",
         "pk": 9,
         "fields": {
-            "name": "Tooth",
+            "name": "Tooth-upper-right",
             "description": "Human canine tooth. This is the upper-right tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -84,7 +84,7 @@
         "model": "remy_text_api.item",
         "pk": 10,
         "fields": {
-            "name": "Tooth",
+            "name": "Tooth-upper-left",
             "description": "Human canine tooth. This is the upper-left tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -93,7 +93,7 @@
         "model": "remy_text_api.item",
         "pk": 11,
         "fields": {
-            "name": "Tooth",
+            "name": "Tooth-lower-right",
             "description": "Human canine tooth. This is the lower-right tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -102,7 +102,7 @@
         "model": "remy_text_api.item",
         "pk": 12,
         "fields": {
-            "name": "Tooth",
+            "name": "Tooth-lower-left",
             "description": "Human canine tooth. This is the lower-left tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }

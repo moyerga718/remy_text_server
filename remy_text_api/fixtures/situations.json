@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop.",
-            "location": "South Shore"
+            "location": "South Shore—Truck"
         }
     },
     {
@@ -12,23 +12,15 @@
         "pk": 2,
         "fields": {
             "text": "You search the truck and find a lockbox hidden under the back seat.",
-            "location": "South Shore"
+            "location": "South Shore—Truck"
         }
     },
     {
         "model": "remy_text_api.situation",
         "pk": 3,
         "fields": {
-            "text": "You are standing on the dock facing north, looking out on a large lake. The eastern and western sides of the lake are bordered by north-south trending mountain ranges. A cherry red plane is wrecked in the center of the lake, about 1 km north of you. Even further to the north, you see a glacier that seems to be supplying water to the lake. A kayak is tied to one of the support beams of the dock. It is cold.",
-            "location": "South Shore"
-        }
-    },
-    {
-        "model": "remy_text_api.situation",
-        "pk": 4,
-        "fields": {
-            "text": "You reach out to touch the clock and your hand passes through it like it isn’t there. You can’t see whats on the other side, but it feels like you've slipped your hand into a vat of warm molasses. You feel a small solid object amidst the goo.",
-            "location": "South Shore"
+            "text": "You are standing on the dock facing north, looking out on a large lake. The eastern and western sides of the lake are bordered by north-south trending mountain ranges. A cherry red plane is wrecked in the center of the lake, about 1 km north of you. Even further to the north, you see a glacier that seems to be supplying water to the lake. A kayak is floating next to the dock. It is cold.",
+            "location": "South Shore—Dock"
         }
     },
     {
@@ -36,23 +28,31 @@
         "pk": 5,
         "fields": {
             "text": "You are standing outside of the truck. You can read the clock from the outside of the car. It reads 11:59.",
-            "location": "South Shore"
+            "location": "South Shore—Truck"
         }
     },
     {
         "model": "remy_text_api.situation",
         "pk": 6,
         "fields": {
-            "text": "You pull your hand out from the dashboard. You open up your fist and find a canine tooth in the palm of your hand. Your head starts to hurt and your vision goes black for a moment. You are standing next to the car. The clock reads 7:00.",
-            "location": "South Shore"
+            "text": "You look inside the lockbox. You find an orange ticket and a small diamond. You take both.",
+            "location": "South Shore—Truck"
         }
     },
     {
         "model": "remy_text_api.situation",
         "pk": 7,
         "fields": {
-            "text": "You use the key to unlock the lockbox. Inside, you find a small diamond and an orange ticket.",
-            "location": "South Shore"
+            "text": "There is a paddle inside the kayak. The bright red plane to the north sticks out against the glacier behind it.",
+            "location": "South Shore—Dock"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 9,
+        "fields": {
+            "text": "As you approach the crashed plane on your kayak, you see a man sitting on one of the wings. He’s old, thin, and wearing a full tuxedo. He watches you as you approach and says nothing.  You also notice the strange fish that are circling the plane in the water. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see a strange rock fixture on a cliff face to the east. The dock is to the south.",
+            "location": "Lake—Near Plane"
         }
     },
     {

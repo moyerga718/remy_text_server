@@ -131,5 +131,26 @@
         "fields": {
             "text": "search"
         }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 19,
+        "fields": {
+            "text": "key"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 20,
+        "fields": {
+            "text": "kayak"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 21,
+        "fields": {
+            "text": "plane"
+        }
     }
 ]

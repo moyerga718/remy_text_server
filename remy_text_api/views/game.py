@@ -82,17 +82,18 @@ class GameView(ViewSet):
         5. Check to see if character must have a specific item in their inventory to complete this action:
             a. If required_item_bool is true, see if that item is in the game's inventory
             b. If user does not have this item in this game yet, return a response saying "You don't have the item required"
-        6. Check to see if this action is a one-time action that has already been completed: 
+        6. Check to see if this action relies on another action to be completed first
+        7. Check to see if this action is a one-time action that has already been completed OR cannot be completed because another action that disables it has already been completed: 
             a. Search for game flag object associated with found action
             b. Check to see if it has already been completed. If so, return message saying "You've already done that".
             c. If it has not been completed, mark game flag object as completed and continue. 
-        7. If player receives an item by completing this action, add that item to their inventory:
+        8. If player receives an item by completing this action, add that item to their inventory:
             a. See if get_item_bool on action is true or false.
             b. if true, find item object and add that item to game.items.
-        8. Check to see if the character goes to a new situation after performing this action
+        9. Check to see if the character goes to a new situation after performing this action
             a. See if new_situation_bool is true or false.
             b. if true, get new situation object using new_situation_id on action and update it on game object
-        9. Time to package up all necessary data and send it back to client in response. We need:
+        10. Time to package up all necessary data and send it back to client in response. We need:
             a. Game data (now possibly updated with new situation object and new item object.)
             b. id of game flag that was marked true (if flag was marked true)
             c. Response from action object.
@@ -153,44 +154,67 @@ class GameView(ViewSet):
                 response_data["message"] = "You don't have the item required for this."
                 return Response(response_data)
 
-        # 6a
+        #6
+        try:
+            necessary_completed_actions = Action.objects.filter(pk__in = found_action.enable_action_dependencies.all())
+            for necessary_action in necessary_completed_actions:
+                found_game_flag = GameFlag.objects.get(game=game, action=necessary_action)
+                if found_game_flag.completed is False:
+                    response_data["message"] = found_action.response
+                    return Response(response_data)
+        except:
+            pass
+
+        # 7a
+        completed_game_flag_ids = []
         try:
             game_flag = GameFlag.objects.get(action=found_action, game=game)
-            # 6b
+            # 7b
             if game_flag.completed is True:
                 response_data["message"] = "You've already done that."
                 return Response(response_data)
-            # 6c
+            # 7c
             else:
                 game_flag.completed = True
                 game_flag.save()
+                completed_game_flag_ids.append(game_flag.id)
+                try:
+                    dependent_actions = Action.objects.filter(pk__in= found_action.disable_action_dependencies.all())
+                    for dependent_action in dependent_actions:
+                        found_game_flag = GameFlag.objects.get(game=game, action = dependent_action)
+                        found_game_flag.completed = True
+                        found_game_flag.save()
+                        completed_game_flag_ids.append(found_game_flag.id)
+                except: 
+                    pass
         except:
-            game_flag = {}
-
-        # 7a
-        if found_action.get_item_bool is True:
-            # 7b
-            new_item = Item.objects.get(pk=found_action.new_item_id)
-            game.items.add(new_item)
-            game.save()
+            pass
 
         # 8a
-        if found_action.new_situation_bool is True:
+        if found_action.get_item_bool is True:
             # 8b
+            for new_item in found_action.new_items.all():
+                new_item = Item.objects.get(pk=new_item.id)
+                game.items.add(new_item)
+                game.save()
+
+        # 9a
+        if found_action.new_situation_bool is True:
+            # 9b
             new_situation = Situation.objects.get(
                 pk=found_action.new_situation_id)
             game.current_situation = new_situation
             game.save()
 
-        # 9
+        # 10
         game_serializer = GameSerializer(game)
-        game_flag_serializer = GameFlagIdSerializer(game_flag)
+        # game_flag_serializer = GameFlagIdSerializer(game_flag)
         found_action_serializer = ActionResponseSerializer(found_action)
 
         response_data = {
             "action_completed": True,
             "game_data": game_serializer.data,
-            "completed_game_flag_id": game_flag_serializer.data,
+            "completed_game_flag_ids": completed_game_flag_ids,
             "action_response": found_action_serializer.data
         }
 
