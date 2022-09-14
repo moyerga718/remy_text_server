@@ -5,7 +5,7 @@
         "fields": {
             "situation": 1,
             "verbs": [2,3,10],
-            "nouns": [7,16],
+            "nouns": [7,16,18],
             "new_situation_bool": true,
             "new_situation": 2,
             "response": "",
@@ -13,7 +13,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -30,7 +34,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -42,12 +50,16 @@
             "nouns": [8],
             "new_situation_bool": false,
             "new_situation": 1000,
-            "response": "It is 2:30.",
+            "response": "The clock reads 8:19",
             "get_item_bool": false,
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -64,7 +76,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -73,7 +89,7 @@
         "fields": {
             "situation": 1,
             "verbs": [5,6],
-            "nouns": [7],
+            "nouns": [7,18],
             "new_situation_bool": true,
             "new_situation": 5,
             "response": "",
@@ -81,7 +97,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -89,16 +109,20 @@
         "pk": 6,
         "fields": {
             "situation": 2,
-            "verbs": [7,13,14],
-            "nouns": [10],
-            "new_situation_bool": false,
+            "verbs": [1],
+            "nouns": [5],
+            "new_situation_bool": true,
             "new_situation": 1000,
-            "response": "Coat taken.",
-            "get_item_bool": true,
-            "new_item": 4,
+            "response": "",
+            "get_item_bool": false,
+            "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -115,7 +139,11 @@
             "new_item": 5,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -132,7 +160,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -149,7 +181,11 @@
             "new_item": 999,
             "required_item_bool": true,
             "required_item": 6,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -166,7 +202,11 @@
             "new_item": 6,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -183,7 +223,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -200,7 +244,11 @@
             "new_item": 7,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -217,7 +265,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -234,7 +286,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -251,7 +307,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -268,7 +328,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -285,7 +349,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -302,7 +370,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -319,7 +391,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -336,7 +412,11 @@
             "new_item": 8,
             "required_item_bool": false,
             "required_item": 999,
-            "important": true
+            "important": true,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -353,7 +433,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     },
     {
@@ -370,7 +454,11 @@
             "new_item": 999,
             "required_item_bool": false,
             "required_item": 999,
-            "important": false
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
         }
     }
 ]

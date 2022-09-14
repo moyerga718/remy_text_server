@@ -3,7 +3,7 @@
         "model": "remy_text_api.situation",
         "pk": 1,
         "fields": {
-            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back to you. It's foggy, but you can see there is a dock to the north of you. As you bring the black SUV to a stop, you hear a rustling coming from the trunk. The clock on the dashboard reads 2:14.",
+            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop.",
             "location": "South Shore"
         }
     },
@@ -11,7 +11,7 @@
         "model": "remy_text_api.situation",
         "pk": 2,
         "fields": {
-            "text": "You search the trunk of the car. You see some old coats, a few PVC pipes, and a lockbox.",
+            "text": "You search the truck and find a lockbox hidden under the back seat.",
             "location": "South Shore"
         }
     },
@@ -19,7 +19,7 @@
         "model": "remy_text_api.situation",
         "pk": 3,
         "fields": {
-            "text": "You are standing on the dock facing north, looking out on a large fjord. The eastern and western sides of the ford are bordered by north-south trending mountain ranges. A cherry red plane is wrecked in the water about 1 km north of you. Much further to the north, you see a glacier that seems to be supplying water to the fjord. You see a pile of bobby pins at the edge of the dock. The smell of the sea is in the air. It is cold.",
+            "text": "You are standing on the dock facing north, looking out on a large lake. The eastern and western sides of the lake are bordered by north-south trending mountain ranges. A cherry red plane is wrecked in the center of the lake, about 1 km north of you. Even further to the north, you see a glacier that seems to be supplying water to the lake. A kayak is tied to one of the support beams of the dock. It is cold.",
             "location": "South Shore"
         }
     },
@@ -35,7 +35,7 @@
         "model": "remy_text_api.situation",
         "pk": 5,
         "fields": {
-            "text": "You are standing outside of the car. You can read the clock from the outside of the car. It reads 11:59.",
+            "text": "You are standing outside of the truck. You can read the clock from the outside of the car. It reads 11:59.",
             "location": "South Shore"
         }
     },
@@ -51,7 +51,7 @@
         "model": "remy_text_api.situation",
         "pk": 7,
         "fields": {
-            "text": "You manage to pick the lockbox with the bobbypin. There is a single bean inside.",
+            "text": "You use the key to unlock the lockbox. Inside, you find a small diamond and an orange ticket.",
             "location": "South Shore"
         }
     },

@@ -103,5 +103,13 @@
         "fields": {
             "text": "unlock"
         }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 16,
+        "fields": {
+            "text": "stop"
+        }
     }
+
 ]
