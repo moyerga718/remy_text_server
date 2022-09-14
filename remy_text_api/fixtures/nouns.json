@@ -45,7 +45,7 @@
         "model": "remy_text_api.noun",
         "pk": 7,
         "fields": {
-            "text": "car"
+            "text": "truck"
         }
     },
     {
@@ -108,7 +108,7 @@
         "model": "remy_text_api.noun",
         "pk": 16,
         "fields": {
-            "text": "trunk"
+            "text": "backseat"
         }
     },
     {
@@ -116,6 +116,41 @@
         "pk": 17,
         "fields": {
             "text": "pvc"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 18,
+        "fields": {
+            "text": "car"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 17,
+        "fields": {
+            "text": "search"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 19,
+        "fields": {
+            "text": "key"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 20,
+        "fields": {
+            "text": "kayak"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 21,
+        "fields": {
+            "text": "plane"
         }
     }
 ]

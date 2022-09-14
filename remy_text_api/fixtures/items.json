@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Photo",
-            "description": "Photo of Sam. There's a note on the back: 'Remember, if you get nervous, just pretend I'm in the front row :)'",
+            "description": "Photo of you and Sam. There's a note on the back: 'A good night'.",
             "starting_item": true
         }
     },
@@ -30,44 +30,89 @@
         "model": "remy_text_api.item",
         "pk": 4,
         "fields": {
-            "name": "Coat",
-            "description": "Old goosedown coat. Looks awful, smells worse.... very warm.",
-            "starting_item": false
+            "name": "Key",
+            "description": "Small silver key. Looks like the one that went to the lockbox hidden under the backseat of Remy's truck.",
+            "starting_item" : true
         }
     },
     {
         "model": "remy_text_api.item",
         "pk": 5,
         "fields": {
-            "name": "Pipe",
-            "description": "White PVC pipe, capped on both ends. Covered in TSA stickers. How many conferences did this thing go to?",
-            "starting_item": false
+            "name": "Diamond",
+            "description": "Small diamond. Probably worth a lot.",
+            "starting_item" : false
         }
     },
     {
         "model": "remy_text_api.item",
         "pk": 6,
         "fields": {
-            "name": "Bobbypin",
-            "description": "Bent bobbypin. Used for styling hair, or other nefarious activities.",
-            "starting_item": false
+            "name": "Ruby",
+            "description": "Small ruby. Probably worth a lot.",
+            "starting_item" : false
         }
     },
     {
         "model": "remy_text_api.item",
         "pk": 7,
         "fields": {
-            "name": "Tooth",
-            "description": "Human canine tooth. Surprisingly large. You start thinking of red kites and summer sun.",
-            "starting_item": false
+            "name": "Emerald",
+            "description": "Small emerald. Probably worth a lot.",
+            "starting_item" : false
         }
     },
     {
         "model": "remy_text_api.item",
         "pk": 8,
         "fields": {
-            "name": "Bean",
-            "description": "Single bean. You could do a lot with this.",
+            "name": "Sapphire",
+            "description": "Small sapphire. Probably worth a lot.",
+            "starting_item" : false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 9,
+        "fields": {
+            "name": "Tooth-upper-right",
+            "description": "Human canine tooth. This is the upper-right tooth. Four would make a full set. You start thinking of red kites and summer sun.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 10,
+        "fields": {
+            "name": "Tooth-upper-left",
+            "description": "Human canine tooth. This is the upper-left tooth. Four would make a full set. You start thinking of red kites and summer sun.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 11,
+        "fields": {
+            "name": "Tooth-lower-right",
+            "description": "Human canine tooth. This is the lower-right tooth. Four would make a full set. You start thinking of red kites and summer sun.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 12,
+        "fields": {
+            "name": "Tooth-lower-left",
+            "description": "Human canine tooth. This is the lower-left tooth. Four would make a full set. You start thinking of red kites and summer sun.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 13,
+        "fields": {
+            "name": "Note",
+            "description": "Note from shipwreck. There are a ton of characters at the top of the page that you don't recognize. Several arrows lead from those characters and point to a message at the bottom of the page. It reads: 'ONE GOOD NIGHT. I JUST WANT ONE GOOD NIGHT. IS THAT SO MUCH TO ASK?'",
             "starting_item": false
         }
     },

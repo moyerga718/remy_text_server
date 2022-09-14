@@ -103,5 +103,27 @@
         "fields": {
             "text": "unlock"
         }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 16,
+        "fields": {
+            "text": "stop"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 17,
+        "fields": {
+            "text": "enter"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 18,
+        "fields": {
+            "text": "paddle"
+        }
     }
+
 ]
