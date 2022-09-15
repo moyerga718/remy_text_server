@@ -2276,7 +2276,6 @@
         }
     },
     {
-
         "model": "remy_text_api.action",
         "pk": 103,
         "fields": {
@@ -2500,6 +2499,52 @@
             "required_item_bool": false,
             "required_item": 999,
             "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 113,
+        "fields": {
+            "situation": 10,
+            "verbs": [1,17,27,28],
+            "nouns": [70,71,72],
+            "new_situation_bool": true,
+            "new_situation": 1,
+            "alt_situation": 1000,
+            "display_response_on_complete": true,
+            "response": "The water is so cold that it takes your breath away as you climb in. The fish take you... the light is so bright its blinding...",
+            "get_item_bool": false,
+            "new_items": [],
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": false,
+            "use_item_bool": false,
+            "use_item": 999,
+            "enable_action_dependencies" : [],
+            "disable_action_dependencies" : []
+        }
+    },
+    {
+        "model": "remy_text_api.action",
+        "pk": 114,
+        "fields": {
+            "situation": 10,
+            "verbs": [4],
+            "nouns": [9],
+            "new_situation_bool": false,
+            "new_situation": 1000,
+            "alt_situation": 1000,
+            "display_response_on_complete": true,
+            "response": "You reach over and touch the pocket watch in the thin man's hand. Your hand phases through it and disappears. You feel something in the ether and you pull it out—a tooth. He looks right at you: 'I knew you'd get it.'",
+            "get_item_bool": true,
+            "new_items": [12],
+            "required_item_bool": false,
+            "required_item": 999,
+            "important": true,
             "use_item_bool": false,
             "use_item": 999,
             "enable_action_dependencies" : [],

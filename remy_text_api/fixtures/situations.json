@@ -3,7 +3,7 @@
         "model": "remy_text_api.situation",
         "pk": 1,
         "fields": {
-            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The road that you came from stretches back to the east. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop. Edelweiss is playing on the radio—you think of stiff suits and fumbling through a waltz.",
+            "text": "...the sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The road that you came from stretches back to the east. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop. Edelweiss is playing on the radio—you think of stiff suits and fumbling through a waltz.",
             "location": "South Shore—Truck"
         }
     },
@@ -59,7 +59,7 @@
         "model": "remy_text_api.situation",
         "pk": 10,
         "fields": {
-            "text": "You climb onto the plane and take a seat next to the man. He doesn’t say anything for a while, just gives you a knowing smile. After a seemingly long silence, he points to the water and says “You’re gonna have to get in at some point you know. It won’t be easy but… I don’t make up the rules. If you’ve got anything valuable, feel free to show me first. Four should be enough to make things go a bit smoother.”",
+            "text": "You climb onto the plane and take a seat next to the man. After a seemingly long silence, he leans over and shows you the pocket watch in his hand. It reads 7:18. He nods to the water and says “You’re gonna have to get in at some point you know. It won’t be easy but… I don’t make up the rules. If you’ve got anything valuable, feel free to show me first. Four should be enough to make things go a bit smoother.”",
             "location": "Lake—Plane"
         }
     },

@@ -180,6 +180,20 @@
         "fields": {
             "text": "sit"
         }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 27,
+        "fields": {
+            "text": "swim"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 28,
+        "fields": {
+            "text": "jump"
+        }
     }
 
 ]
