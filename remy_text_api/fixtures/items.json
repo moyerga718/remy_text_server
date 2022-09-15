@@ -13,8 +13,8 @@
         "pk": 2,
         "fields": {
             "name": "Hook",
-            "description": "Large metal hook. Probably used in a meat factory or for commercial fishing.",
-            "starting_item": true
+            "description": "skyhooks",
+            "starting_item": false
         }
     },
     {
@@ -22,7 +22,7 @@
         "pk": 3,
         "fields": {
             "name": "Ticket",
-            "description": "Untorn orange ticket. Reminds you of riding The Zipper at the county fair.",
+            "description": "Untorn orange ticket. 'ADMIT ONE' is printed on both sides.",
             "starting_item": true
         }
     },
@@ -75,7 +75,7 @@
         "model": "remy_text_api.item",
         "pk": 9,
         "fields": {
-            "name": "Tooth-upper-right",
+            "name": "Tooth-UR",
             "description": "Human canine tooth. This is the upper-right tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -84,7 +84,7 @@
         "model": "remy_text_api.item",
         "pk": 10,
         "fields": {
-            "name": "Tooth-upper-left",
+            "name": "Tooth-UL",
             "description": "Human canine tooth. This is the upper-left tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -93,7 +93,7 @@
         "model": "remy_text_api.item",
         "pk": 11,
         "fields": {
-            "name": "Tooth-lower-right",
+            "name": "Tooth-LR",
             "description": "Human canine tooth. This is the lower-right tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -102,7 +102,7 @@
         "model": "remy_text_api.item",
         "pk": 12,
         "fields": {
-            "name": "Tooth-lower-left",
+            "name": "Tooth-LL",
             "description": "Human canine tooth. This is the lower-left tooth. Four would make a full set. You start thinking of red kites and summer sun.",
             "starting_item": false
         }
@@ -111,9 +111,18 @@
         "model": "remy_text_api.item",
         "pk": 13,
         "fields": {
-            "name": "Note",
-            "description": "Note from shipwreck. There are a ton of characters at the top of the page that you don't recognize. Several arrows lead from those characters and point to a message at the bottom of the page. It reads: 'ONE GOOD NIGHT. I JUST WANT ONE GOOD NIGHT. IS THAT SO MUCH TO ASK?'",
+            "name": "Ring",
+            "description": "Gold ring. Found on the middle finger of a charred corpse in the wrecked fishing boat. A small opal decorates it.",
             "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 14,
+        "fields": {
+            "name": "Necklace",
+            "description": "Gold necklace. Adorned with a lovely opal pendant.",
+            "starting_item": true
         }
     },
     {

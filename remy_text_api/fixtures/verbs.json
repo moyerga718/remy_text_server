@@ -124,6 +124,34 @@
         "fields": {
             "text": "paddle"
         }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 19,
+        "fields": {
+            "text": "give"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 20,
+        "fields": {
+            "text": "show"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 21,
+        "fields": {
+            "text": "play"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 22,
+        "fields": {
+            "text": "sing"
+        }
     }
 
 ]
