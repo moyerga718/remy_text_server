@@ -113,13 +113,6 @@
     },
     {
         "model": "remy_text_api.noun",
-        "pk": 17,
-        "fields": {
-            "text": "pvc"
-        }
-    },
-    {
-        "model": "remy_text_api.noun",
         "pk": 18,
         "fields": {
             "text": "car"
@@ -368,6 +361,125 @@
         "pk": 52,
         "fields": {
             "text": "shore"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 53,
+        "fields": {
+            "text": "woods"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 54,
+        "fields": {
+            "text": "path"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 55,
+        "fields": {
+            "text": "message"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 56,
+        "fields": {
+            "text": "text"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 57,
+        "fields": {
+            "text": "necklace"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 58,
+        "fields": {
+            "text": "opal"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 59,
+        "fields": {
+            "text": "muffin"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 60,
+        "fields": {
+            "text": "muffins"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 61,
+        "fields": {
+            "text": "clearing"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 62,
+        "fields": {
+            "text": "road"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 63,
+        "fields": {
+            "text": "lot"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 64,
+        "fields": {
+            "text": "child"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 65,
+        "fields": {
+            "text": "kid"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 66,
+        "fields": {
+            "text": "boy"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 67,
+        "fields": {
+            "text": "girl"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 68,
+        "fields": {
+            "text": "bird"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 69,
+        "fields": {
+            "text": "corpse"
         }
     }
 ]

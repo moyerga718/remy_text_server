@@ -127,6 +127,24 @@
     },
     {
         "model": "remy_text_api.item",
+        "pk": 15,
+        "fields": {
+            "name": "Muffin",
+            "description": "Freshly baked muffin. Still piping hot.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
+        "pk": 16,
+        "fields": {
+            "name": "Opal",
+            "description": "Large fire opal. Given to you by the child on the road. Feels heavy and significant.",
+            "starting_item": false
+        }
+    },
+    {
+        "model": "remy_text_api.item",
         "pk": 999,
         "fields": {
             "name": "NULL ITEM",

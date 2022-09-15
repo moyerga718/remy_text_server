@@ -152,6 +152,34 @@
         "fields": {
             "text": "sing"
         }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 23,
+        "fields": {
+            "text": "speak"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 24,
+        "fields": {
+            "text": "talk"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 25,
+        "fields": {
+            "text": "help"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 26,
+        "fields": {
+            "text": "sit"
+        }
     }
 
 ]
