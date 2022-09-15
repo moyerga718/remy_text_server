@@ -481,5 +481,26 @@
         "fields": {
             "text": "corpse"
         }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 70,
+        "fields": {
+            "text": "lake"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 71,
+        "fields": {
+            "text": "water"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 72,
+        "fields": {
+            "text": "fish"
+        }
     }
 ]

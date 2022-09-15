@@ -38,6 +38,7 @@ class GameView(ViewSet):
             current_situation=current_situation,
         )
         game.items.add(*request.data['items'])
+        game.starting_item = Item.objects.get(pk=request.data['items'][0])
         for action in important_actions:
             GameFlag.objects.create(
                 game=game,
@@ -143,6 +144,34 @@ class GameView(ViewSet):
         except:
             response_data["message"] = "You can't do that here."
             return Response(response_data)
+
+        # CHECK TO SEE IF USER IS TRIGGERING THE END OF THE GAME.
+
+        if found_action.id == 113:
+            #See if user has given the man all four teeth in this game:
+            try:
+                tooth1_flag = GameFlag.objects.get(action_id = 31, game=game, completed=True)
+                tooth2_flag = GameFlag.objects.get(action_id = 32, game=game, completed=True)
+                tooth3_flag = GameFlag.objects.get(action_id = 33, game=game, completed=True)
+                tooth4_flag = GameFlag.objects.get(action_id = 34, game=game, completed=True)
+            except: 
+                pass
+            
+            #See if user has given the man all four gems in this game:
+            try:
+                gem1_flag = GameFlag.objects.get(action_id = 27, game=game, completed=True)
+                gem2_flag = GameFlag.objects.get(action_id = 28, game=game, completed=True)
+                gem3_flag = GameFlag.objects.get(action_id = 29, game=game, completed=True)
+                gem4_flag = GameFlag.objects.get(action_id = 30, game=game, completed=True)
+            except: 
+                pass
+
+            #If they haven't completed this, reset all game flags and clear inventory for this game.
+            all_flags = GameFlag.objects.filter(game=game)
+            for flag in all_flags:
+                flag.completed = False
+                flag.save()
+            
 
         # 5
         if found_action.required_item_bool is True:
