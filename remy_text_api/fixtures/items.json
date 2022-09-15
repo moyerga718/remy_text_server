@@ -131,7 +131,7 @@
         "fields": {
             "name": "Muffin",
             "description": "Freshly baked muffin. Still piping hot.",
-            "starting_item": true
+            "starting_item": false
         }
     },
     {
@@ -140,7 +140,7 @@
         "fields": {
             "name": "Opal",
             "description": "Large fire opal. Given to you by the child on the road. Feels heavy and significant.",
-            "starting_item": true
+            "starting_item": false
         }
     },
     {

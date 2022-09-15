@@ -3,7 +3,7 @@
         "model": "remy_text_api.situation",
         "pk": 1,
         "fields": {
-            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop. Edelweiss is playing on the radio—you think of stiff suits and fumbling through a waltz.",
+            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The road that you came from stretches back to the east. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop. Edelweiss is playing on the radio—you think of stiff suits and fumbling through a waltz.",
             "location": "South Shore—Truck"
         }
     },
@@ -27,7 +27,7 @@
         "model": "remy_text_api.situation",
         "pk": 5,
         "fields": {
-            "text": "You are standing outside of the truck. You can read the clock from the outside of the car. It reads 11:59. Edelweiss is playing on the radio and you can faintly smell roses.",
+            "text": "You are standing outside of the truck. You can read the clock from the outside of the car. It reads 11:59. Edelweiss is playing on the radio and you can faintly smell roses. The dock is to the north. The road you came from stretches to the east.",
             "location": "South Shore—Truck"
         }
     },
@@ -155,7 +155,7 @@
         "model": "remy_text_api.situation",
         "pk": 22,
         "fields": {
-            "text": "You are just south of the tongue of the glacier that feeds into the northern side of the lake. You see a black square lodged into the ice cliff to the north of you. A faint chanting sound is coming from that direction. There is a fishing boat wrecked in the water to the west of you. An alarm is going off inside of the boat.",
+            "text": "You are just south of the tongue of the glacier that feeds into the northern side of the lake. You see a black square lodged into the ice cliff to the north of you. A faint chanting sound is coming from that direction. There is a fishing boat wrecked in the water to the west of you.",
             "location": "Lake—North"
         }
     },
@@ -203,7 +203,7 @@
         "model": "remy_text_api.situation",
         "pk": 28,
         "fields": {
-            "text": "You walk down the path in the woods until you find a circular clearing. Sun is filtering in through the treetops. There is a statue of a woman in the middle of the clearing. She is cradling a sundial with one arm. The other arm is sticking out towards you, hand upturned. Several silver keys embedded with sapphires are placed on the hand. A message is carved into the base of the statue and a muffin is placed just above the message.",
+            "text": "You walk down the path in the woods until you find a circular clearing. Sun is filtering in through the treetops. There is a statue of a woman in the middle of the clearing. She is cradling a sundial with one arm. The other arm is sticking out towards you, hand upturned. Several silver keys embedded with sapphires are placed on the hand. A message is carved into the base of the statue and a box of muffins is placed just above the message.",
             "location": "Eastern Shore—Clearing"
         }
     },
@@ -227,7 +227,7 @@
         "model": "remy_text_api.situation",
         "pk": 31,
         "fields": {
-            "text": "You are further down the road. You can no longer see the turn into the gravel lot when you look to the west. The road stretches endlessly to the east. Is that someone on the side of the road to the east?",
+            "text": "You are further down the road. You can no longer see the turn into the gravel lot when you look to the west. The road stretches endlessly to the east. Is that someone further down the road?",
             "location": "Southern Road"
         }
     },
