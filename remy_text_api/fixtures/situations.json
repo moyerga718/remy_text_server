@@ -51,7 +51,7 @@
         "model": "remy_text_api.situation",
         "pk": 9,
         "fields": {
-            "text": "As you approach the crashed plane on your kayak, you see a man sitting on one of the wings. He’s old, thin, and wearing a full tuxedo. He watches you as you approach and says nothing.  You also notice the strange fish that are circling the plane in the water. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see a strange rock fixture on a cliff face to the east. The dock is to the south.",
+            "text": "As you approach the crashed plane on your kayak, you see a man sitting on one of the wings. He’s old, thin, and wearing a full tuxedo. He watches you as you approach and says nothing.  You also notice the strange fish that are circling the plane in the water. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see woods on the shore to the east. The dock is to the south.",
             "location": "Lake—Near Plane"
         }
     },
@@ -67,7 +67,7 @@
         "model": "remy_text_api.situation",
         "pk": 11,
         "fields": {
-            "text": "You’re in the kayak by the plane. The man is watching you and the fish are circling. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see a strange rock fixture on a cliff face to the east. The dock is to the south. ",
+            "text": "You’re in the kayak by the plane. The man is watching you and the fish are circling. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see woods on the shore to the east. The dock is to the south. ",
             "location": "Lake—Near Plane"
         }
     },
@@ -180,7 +180,71 @@
         "pk": 25,
         "fields": {
             "text": "The drawer opens easily. Inside you find an emerald and a gold necklace. You take both.",
-            "location": ""
+            "location": "Lake—Glacier"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 26,
+        "fields": {
+            "text": "You are standing next to your kayak on the eastern shore of the lake. The sand at your feet is rocky. The treeline starts further inland and you see a path into the woods. Mountains stretch high above the woods further east. The plane is in the water back to the west.",
+            "location": "Eastern Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 27,
+        "fields": {
+            "text": "You are in the kayak on the eastern side of the lake. The wooded shore is to the east of you. The plane is to your west.",
+            "location": "Eastern Shore"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 28,
+        "fields": {
+            "text": "You walk down the path in the woods until you find a circular clearing. Sun is filtering in through the treetops. There is a statue of a woman in the middle of the clearing. She is cradling a sundial with one arm. The other arm is sticking out towards you, hand upturned. Several silver keys embedded with sapphires are placed on the hand. A message is carved into the base of the statue and a muffin is placed just above the message.",
+            "location": "Eastern Shore—Clearing"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 29,
+        "fields": {
+            "text": "The key comes away freely. The sapphire embedded into the key pops out. You take both.",
+            "location": "Eastern Shore—Clearing"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 30,
+        "fields": {
+            "text": "You are on the road that you came from. It stretches to the east. The truck is in the gravel lot is to the west of you.",
+            "location": "Southern Road"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 31,
+        "fields": {
+            "text": "You are further down the road. You can no longer see the turn into the gravel lot when you look to the west. The road stretches endlessly to the east. Is that someone on the side of the road to the east?",
+            "location": "Southern Road"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 32,
+        "fields": {
+            "text": "You are much further down the road. You find a child on the side of the road. They are wearing all yellow and are dusted with dirt. They’re sitting in front of the corpse of a small bird. The bird has been dead for a while judging by the state of decay.",
+            "location": "Southern Road"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 33,
+        "fields": {
+            "text": "The road stretches endlessly to the east.",
+            "location": "Southern Road"
         }
     },
     {

@@ -369,5 +369,40 @@
         "fields": {
             "text": "shore"
         }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 53,
+        "fields": {
+            "text": "woods"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 54,
+        "fields": {
+            "text": "path"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 55,
+        "fields": {
+            "text": "message"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 56,
+        "fields": {
+            "text": "text"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 57,
+        "fields": {
+            "text": "necklace"
+        }
     }
 ]
