@@ -152,5 +152,222 @@
         "fields": {
             "text": "plane"
         }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 22,
+        "fields": {
+            "text": "cave"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 23,
+        "fields": {
+            "text": "glacier"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 24,
+        "fields": {
+            "text": "diamond"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 25,
+        "fields": {
+            "text": "ruby"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 26,
+        "fields": {
+            "text": "emerald"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 27,
+        "fields": {
+            "text": "sapphire"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 28,
+        "fields": {
+            "text": "tooth-ur"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 29,
+        "fields": {
+            "text": "tooth-ul"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 30,
+        "fields": {
+            "text": "tooth-lr"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 31,
+        "fields": {
+            "text": "tooth-ll"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 32,
+        "fields": {
+            "text": "cliff"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 33,
+        "fields": {
+            "text": "ticket"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 34,
+        "fields": {
+            "text": "boat"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 35,
+        "fields": {
+            "text": "tongue"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 36,
+        "fields": {
+            "text": "ice"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 37,
+        "fields": {
+            "text": "whiteboard"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 38,
+        "fields": {
+            "text": "board"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 39,
+        "fields": {
+            "text": "writing"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 40,
+        "fields": {
+            "text": "ring"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 41,
+        "fields": {
+            "text": "rings"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 42,
+        "fields": {
+            "text": "watch"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 43,
+        "fields": {
+            "text": "drawer"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 44,
+        "fields": {
+            "text": "cabinet"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 45,
+        "fields": {
+            "text": "photo"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 46,
+        "fields": {
+            "text": "piano"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 47,
+        "fields": {
+            "text": "song"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 48,
+        "fields": {
+            "text": "edelweiss"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 49,
+        "fields": {
+            "text": "ballroom"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 50,
+        "fields": {
+            "text": "outside"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 51,
+        "fields": {
+            "text": "beach"
+        }
+    },
+    {
+        "model": "remy_text_api.noun",
+        "pk": 52,
+        "fields": {
+            "text": "shore"
+        }
     }
 ]

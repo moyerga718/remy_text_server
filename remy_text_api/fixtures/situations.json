@@ -3,7 +3,7 @@
         "model": "remy_text_api.situation",
         "pk": 1,
         "fields": {
-            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop.",
+            "text": "The sun gets in your eyes as you turn into the gravel lot. You pull down the visor and your vision comes back. There's a dock to the north of you that stretches over a large body of water. The digital clock on the dashboard reads 2:14 as you bring the truck to a stop. Edelweiss is playing on the radio—you think of stiff suits and fumbling through a waltz.",
             "location": "South Shore—Truck"
         }
     },
@@ -27,7 +27,7 @@
         "model": "remy_text_api.situation",
         "pk": 5,
         "fields": {
-            "text": "You are standing outside of the truck. You can read the clock from the outside of the car. It reads 11:59.",
+            "text": "You are standing outside of the truck. You can read the clock from the outside of the car. It reads 11:59. Edelweiss is playing on the radio and you can faintly smell roses.",
             "location": "South Shore—Truck"
         }
     },
@@ -53,6 +53,134 @@
         "fields": {
             "text": "As you approach the crashed plane on your kayak, you see a man sitting on one of the wings. He’s old, thin, and wearing a full tuxedo. He watches you as you approach and says nothing.  You also notice the strange fish that are circling the plane in the water. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see a strange rock fixture on a cliff face to the east. The dock is to the south.",
             "location": "Lake—Near Plane"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 10,
+        "fields": {
+            "text": "You climb onto the plane and take a seat next to the man. He doesn’t say anything for a while, just gives you a knowing smile. After a seemingly long silence, he points to the water and says “You’re gonna have to get in at some point you know. It won’t be easy but… I don’t make up the rules. If you’ve got anything valuable, feel free to show me first. Four should be enough to make things go a bit smoother.”",
+            "location": "Lake—Plane"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 11,
+        "fields": {
+            "text": "You’re in the kayak by the plane. The man is watching you and the fish are circling. The glacier is to the north. There is a rhythmic pulsing sound coming from a cave to the west. You see a strange rock fixture on a cliff face to the east. The dock is to the south. ",
+            "location": "Lake—Near Plane"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 12,
+        "fields": {
+            "text": "The rhythmic sound gets louder as you pull up to the western shore of the lake. The sound is coming from a cave in the cliff face. All you can see in the cave is an eerie orange light that is pulsing with the sound. The plane is in the water to the east of you.",
+            "location": "Lake—West"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 13,
+        "fields": {
+            "text": "You are standing next to the kayak on the western shore of the lake. The cave is to the west of you. The plane is in the water to the east of you.",
+            "location": "Western Shore—Beach"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 14,
+        "fields": {
+            "text": "You are at the cave entrance. There is a velvet rope held up by gold posts blocking the way. To the left of the cave entrance, there is a table with a small cardboard box on it. “Admissions” is written on the front of the box. Your kayak is on the shore to the east.",
+            "location": "Western Shore—Cave"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 15,
+        "fields": {
+            "text": "You are in your kayak on the western side of the lake. The cave is on the shore to west and the plane is in the water to the east",
+            "location": "Lake—West"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 16,
+        "fields": {
+            "text": "You drop your ticket into the cardboard box. You look over and the velvet rope is gone. The wrist watch is on the table.",
+            "location": "Western Shore—Cave"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 17,
+        "fields": {
+            "text": "You pick up the wrist watch and see that it reads 12:00. It’s a nice watch. Gold rolex. As you are examining it you can feel it getting hotter and hotter. Your hand starts to sear. Then, it goes away. You feel a small weight in your coat that wasn’t there before. You reach in your pocket and find a human canine tooth. You put the watch back where it was.",
+            "location": "Western Shore—Cave"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 18,
+        "fields": {
+            "text": "You are standing on a stage looking out into a grand ballroom full of well-dressed people. About two dozen couples are in the middle of the ballroom in dancing position. The rest of the attendees are in the middle of chatting and drinking. No one is moving—everyone seems to be frozen in time. There is a piano on stage. A vase of roses sits on top of it.",
+            "location": "Western Shore—Ballroom"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 19,
+        "fields": {
+            "text": "A long hallway stretches out in front of you. The walls are covered with burgundy wallpaper. Lamps with red shades light the way. The sound is blaring now. You can see there is a stage at the end of the hallway with a band playing, but you are too far away to get a good look at whats going on.",
+            "location": "Western Shore—Hallway"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 20,
+        "fields": {
+            "text": "You get a clearer picture as you approach the stage. The band is a four-piece - every member must be older than 70. They are all wearing hospital gowns. The music is slow and heavy. Everyone is going through the motions for playing the current song, but there are no instruments or microphones on stage. You realize there are no speakers in the hallway. You notice a photo on the ground.",
+            "location": "Western Shore—Hallway"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 21,
+        "fields": {
+            "text": "You pick up the photo. There is a small ruby taped to the back of it.",
+            "location": "Western Shore—Hallway"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 22,
+        "fields": {
+            "text": "You are just south of the tongue of the glacier that feeds into the northern side of the lake. You see a black square lodged into the ice cliff to the north of you. A faint chanting sound is coming from that direction. There is a fishing boat wrecked in the water to the west of you. An alarm is going off inside of the boat.",
+            "location": "Lake—North"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 23,
+        "fields": {
+            "text": "The inside of the boat is in shambles. Chairs are overturned and broken glass is everywhere. Fingernail scratches on the walls. There is a whiteboard on the wall covered in writing. A charred skeleton is propped up in the corner. There are several rings and a gold watch on the skeleton.",
+            "location": "Lake—Fishing Boat"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 24,
+        "fields": {
+            "text": "You are floating right at the base of the ice cliff. The chanting is significantly louder and now and it sounds aggressive. You don’t recognize the language. You can make out the details of the black square now. It’s a metal filing cabinet drawer lodged in the ice, two feet above the water line. You can access it easily.",
+            "location": "Lake—Glacier"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 25,
+        "fields": {
+            "text": "The drawer opens easily. Inside you find an emerald and a gold necklace. You take both.",
+            "location": ""
         }
     },
     {

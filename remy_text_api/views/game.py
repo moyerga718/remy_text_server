@@ -90,10 +90,11 @@ class GameView(ViewSet):
         8. If player receives an item by completing this action, add that item to their inventory:
             a. See if get_item_bool on action is true or false.
             b. if true, find item object and add that item to game.items.
-        9. Check to see if the character goes to a new situation after performing this action
+        9. If player consumes an item by completing this action, remove that item from their inventory.
+        10. Check to see if the character goes to a new situation after performing this action
             a. See if new_situation_bool is true or false.
             b. if true, get new situation object using new_situation_id on action and update it on game object
-        10. Time to package up all necessary data and send it back to client in response. We need:
+        11. Time to package up all necessary data and send it back to client in response. We need:
             a. Game data (now possibly updated with new situation object and new item object.)
             b. id of game flag that was marked true (if flag was marked true)
             c. Response from action object.
@@ -198,7 +199,13 @@ class GameView(ViewSet):
                 game.items.add(new_item)
                 game.save()
 
-        # 9a
+        # 9a 
+        if found_action.use_item_bool is True: 
+            used_item = Item.objects.get(pk=found_action.use_item_id)
+            game.items.remove(used_item)
+            game.save()
+
+        # 10a
         if found_action.new_situation_bool is True:
             # 9b
             new_situation = Situation.objects.get(
@@ -206,7 +213,7 @@ class GameView(ViewSet):
             game.current_situation = new_situation
             game.save()
 
-        # 10
+        # 11
         game_serializer = GameSerializer(game)
         # game_flag_serializer = GameFlagIdSerializer(game_flag)
         found_action_serializer = ActionResponseSerializer(found_action)
