@@ -19,7 +19,7 @@
         "model": "remy_text_api.situation",
         "pk": 3,
         "fields": {
-            "text": "You are standing on the dock facing north, looking out on a large lake. The eastern and western sides of the lake are bordered by north-south trending mountain ranges. A cherry red plane is wrecked in the center of the lake, about 1 km north of you. Even further to the north, you see a glacier that seems to be supplying water to the lake. A kayak is floating next to the dock. It is cold.",
+            "text": "You are standing on the dock facing north, looking out on a large lake. The eastern and western sides of the lake are bordered by mountains. A cherry red plane is wrecked in the center of the lake, about 1 km north of you. Even further to the north, you see a glacier supplying water to the lake. A kayak is floating next to the dock.",
             "location": "South Shore—Dock"
         }
     },
@@ -35,7 +35,7 @@
         "model": "remy_text_api.situation",
         "pk": 6,
         "fields": {
-            "text": "You look inside the lockbox. You find an orange ticket and a small diamond. You take both.",
+            "text": "You look inside the lockbox. You find a piece of paper and a small diamond. You take both.",
             "location": "South Shore—Truck"
         }
     },
@@ -245,6 +245,22 @@
         "fields": {
             "text": "The road stretches endlessly to the east.",
             "location": "Southern Road"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 34,
+        "fields": {
+            "text": "GOOD ENDING.<br /><br />Game complete.",
+            "location": "Lake Bottom / Game Complete"
+        }
+    },
+    {
+        "model": "remy_text_api.situation",
+        "pk": 35,
+        "fields": {
+            "text": "BAD ENDING.<br /><br />Game complete.",
+            "location": "Lake Bottom / Game Complete"
         }
     },
     {

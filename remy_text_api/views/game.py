@@ -39,6 +39,7 @@ class GameView(ViewSet):
         )
         game.items.add(*request.data['items'])
         game.starting_item = Item.objects.get(pk=request.data['items'][0])
+        game.save()
         for action in important_actions:
             GameFlag.objects.create(
                 game=game,
@@ -114,6 +115,7 @@ class GameView(ViewSet):
 
         # Dictionary that will be sent as a response whenever action can't be completed. Message object will be updated with appropriate text prior to sending response.
         response_data = {
+            "game_over": False,
             "action_completed": False,
             "message": ""
         }
@@ -148,31 +150,65 @@ class GameView(ViewSet):
         # CHECK TO SEE IF USER IS TRIGGERING THE END OF THE GAME.
 
         if found_action.id == 113:
-            #See if user has given the man all four teeth in this game:
+            #Check to see if user meets criteria for "good ending"
             try:
+                #Check to see if giving teeth flags have been comp
                 tooth1_flag = GameFlag.objects.get(action_id = 31, game=game, completed=True)
                 tooth2_flag = GameFlag.objects.get(action_id = 32, game=game, completed=True)
                 tooth3_flag = GameFlag.objects.get(action_id = 33, game=game, completed=True)
                 tooth4_flag = GameFlag.objects.get(action_id = 34, game=game, completed=True)
+
+                #Mark game object as completed
+                game.completed = True
+
+                #Get situation for good ending, update game object
+                good_ending_situation = Situation.objects.get(pk=34)
+                game.current_situation = good_ending_situation
+
+                #save game object and serialize
+                game.save()
+                game_serializer = GameSerializer(game)
+                response_data["game_over"] = True
+                response_data["game_data"] = game_serializer.data
+                return Response(response_data)
             except: 
                 pass
             
-            #See if user has given the man all four gems in this game:
+            #Check to see if user meets criteria for "bad ending"
             try:
                 gem1_flag = GameFlag.objects.get(action_id = 27, game=game, completed=True)
                 gem2_flag = GameFlag.objects.get(action_id = 28, game=game, completed=True)
                 gem3_flag = GameFlag.objects.get(action_id = 29, game=game, completed=True)
                 gem4_flag = GameFlag.objects.get(action_id = 30, game=game, completed=True)
+                
+                #Mark game object as completed
+                game.completed = True
+
+                #Get situation for good ending, update game object
+                bad_ending_situation = Situation.objects.get(pk=35)
+                game.current_situation = bad_ending_situation
+
+                #save game object and serialize
+                game.save()
+                game_serializer = GameSerializer(game)
+                response_data["game_over"] = True
+                response_data["game_data"] = game_serializer.data
+                return Response(response_data)
             except: 
                 pass
 
-            #If they haven't completed this, reset all game flags and clear inventory for this game.
+            #If they don't meet criteria for either ending, reset game flags and game inventory. Game will go back to starting situation (see action pk=113).
             all_flags = GameFlag.objects.filter(game=game)
             for flag in all_flags:
                 flag.completed = False
                 flag.save()
             
-
+            #Clear inventory
+            game.items.clear()
+            #Re-add starting item to inventory.
+            game.items.add(game.starting_item)
+            game.save()
+            
         # 5
         if found_action.required_item_bool is True:
             # 5a
@@ -248,6 +284,7 @@ class GameView(ViewSet):
         found_action_serializer = ActionResponseSerializer(found_action)
 
         response_data = {
+            "game_over": False,
             "action_completed": True,
             "game_data": game_serializer.data,
             "completed_game_flag_ids": completed_game_flag_ids,
