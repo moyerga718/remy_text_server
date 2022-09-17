@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Photo",
-            "description": "Photo of you and Sam. There's a note on the back: 'A good night'.",
+            "description": "Polaroid of you and Sam. There's a note on the back: 'A good night'.",
             "starting_item": true
         }
     },
@@ -21,8 +21,8 @@
         "model": "remy_text_api.item",
         "pk": 3,
         "fields": {
-            "name": "Ticket",
-            "description": "Untorn orange ticket. 'ADMIT ONE' is printed on both sides.",
+            "name": "Paper",
+            "description": "Shred of orange paper. 'ADMIT ONE' is written on both sides.",
             "starting_item": true
         }
     },
