@@ -149,7 +149,7 @@ class GameView(ViewSet):
 
         # CHECK TO SEE IF USER IS TRIGGERING THE END OF THE GAME.
 
-        if found_action.id == 113:
+        if found_action.id == 113 or found_action.id == 156 or found_action.id == 157:
             #Check to see if user meets criteria for "good ending"
             try:
                 #Check to see if giving teeth flags have been comp

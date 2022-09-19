@@ -194,6 +194,47 @@
         "fields": {
             "text": "jump"
         }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 29,
+        "fields": {
+            "text": "eat"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 30,
+        "fields": {
+            "text": "inspect"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 31,
+        "fields": {
+            "text": "yell"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 32,
+        "fields": {
+            "text": "shout"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 33,
+        "fields": {
+            "text": "touch"
+        }
+    },
+    {
+        "model": "remy_text_api.verb",
+        "pk": 34,
+        "fields": {
+            "text": "dance"
+        }
     }
-
 ]
