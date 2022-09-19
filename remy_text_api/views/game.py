@@ -81,6 +81,13 @@ class GameView(ViewSet):
         4. Check to see if the submitted action is an accepted action for the current situation:
             a. Search for an action object for the current situation that has found verb + noun objects in its verbs/nouns many to many array.
             b. If an object isn't found, respond with "You can't do that here."
+
+        *** SPECIAL SITUATION: CHECK TO SEE IF USER IS TRIGGERING THE END OF THE GAME BY PERFORMING A SPECIFIC ACTION.
+            a. Actions 113, 156, and 157 trigger the end of the game process.
+            b. If user has given the man on the plane all four teeth (check to see if those game flags for give teeth actions are marked as true), clear game inventory and update game to have situation for good ending.
+            c. If user has given the man on the plane all four gems and NOT all four teeth (check to see if game flags for give gem actions are marked as true), clear game inventory and update game to have situation for bad ending.
+            d. If user has done neither of these, game resets to beginning. Clear inventory except for starting item, reset all game flags, current situation gets set back to one.
+
         5. Check to see if character must have a specific item in their inventory to complete this action:
             a. If required_item_bool is true, see if that item is in the game's inventory
             b. If user does not have this item in this game yet, return a response saying "You don't have the item required"
@@ -147,7 +154,7 @@ class GameView(ViewSet):
             response_data["message"] = "You can't do that here."
             return Response(response_data)
 
-        # CHECK TO SEE IF USER IS TRIGGERING THE END OF THE GAME.
+        #*** CHECK TO SEE IF USER IS TRIGGERING THE END OF THE GAME.
 
         if found_action.id == 113 or found_action.id == 156 or found_action.id == 157:
             #Check to see if user meets criteria for "good ending"
@@ -164,6 +171,9 @@ class GameView(ViewSet):
                 #Get situation for good ending, update game object
                 good_ending_situation = Situation.objects.get(pk=34)
                 game.current_situation = good_ending_situation
+
+                #clear inventory
+                game.items.clear()
 
                 #save game object and serialize
                 game.save()
@@ -187,6 +197,9 @@ class GameView(ViewSet):
                 #Get situation for good ending, update game object
                 bad_ending_situation = Situation.objects.get(pk=35)
                 game.current_situation = bad_ending_situation
+
+                #clear inventory
+                game.items.clear()
 
                 #save game object and serialize
                 game.save()

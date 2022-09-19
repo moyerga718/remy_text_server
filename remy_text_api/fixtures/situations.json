@@ -211,7 +211,7 @@
         "model": "remy_text_api.situation",
         "pk": 29,
         "fields": {
-            "text": "The key comes away freely. The sapphire embedded into the key pops out. You take both.",
+            "text": "A key comes away freely. The sapphire embedded into the key pops out. You take both.",
             "location": "Eastern Shore—Clearing"
         }
     },
@@ -251,7 +251,7 @@
         "model": "remy_text_api.situation",
         "pk": 34,
         "fields": {
-            "text": "...you put your hand up to keep the sun out of your eyes. Remy leans over from the driver's seat and pulls down the sun visor for you—it's just out of your reach. He pulls up to the front of the carpool lane and you hop out. Your backpack feels unnatural after not wearing it for three months. You spare a moment to take one last look at Remy before you head through the front doors of Davis Elementary and he heads back to Lansing. 'I'll see you soon'. <br /><br />Game complete.",
+            "text": "The cold water takes your breath away as you get in. The eyeless fish stop circling the plane and begin to surround you. They wrap their mouths around you and begin to drag you down. You start to panic, but you calm down when you realize you're not having any trouble breathing. The fish take you to a giant stone door at the bottom of the lake. The door is locked shut with a strange stone contraption that reminds you of Aztec engineering. Then, the contraption begins to unravel and the door opens to reveal a blinding light. You are gently carried through the open door and...<br /><br />...you put your hand up to keep the sun out of your eyes. Remy leans over from the driver's seat and pulls down the sun visor for you—it's just out of your reach. He pulls up to the front of the carpool lane and you hop out. Your backpack feels unnatural after not wearing it for three months. You spare a moment to take one last look at Remy before you head through the front doors of Davis Elementary and he heads back to Lansing. 'I'll see you soon'. <br /><br />Game complete.",
             "location": "School / Game Complete"
         }
     },
@@ -259,7 +259,7 @@
         "model": "remy_text_api.situation",
         "pk": 35,
         "fields": {
-            "text": "...you try to open your eyes but you realize you don't have any. You can feel your fins brushing up against the sides of the other fish around you. The cold doesn't bother you and the circular motion of the school is comforting. You try to remember what Remy had said in that field so long ago while you wait for the next kayak. 'Make Time'. You wonder if you really did.<br /><br />Game complete.",
+            "text": "The cold water takes your breath away as you get in. The eyeless fish stop circling the plane and begin to surround you. They wrap their mouths around you and begin to drag you down. You start to panic, but you calm down when you realize you're not having any trouble breathing. The fish take you to a giant stone door at the bottom of the lake. The door is locked shut with a strange stone contraption that reminds you of Aztec engineering. Then, the contraption begins to unravel and the door opens to reveal a blinding light. You are gently carried through the open door and...<br /><br />...you try to open your eyes but you realize you don't have any. You can feel your fins brushing up against the sides of the other fish around you. The cold doesn't bother you and the circular motion of the school is comforting. You try to remember what Remy had said in that field so long ago while you wait for the next kayak. 'Make Time'. You wonder if you really did.<br /><br />Game complete.",
             "location": "School / Game Complete"
         }
     },
