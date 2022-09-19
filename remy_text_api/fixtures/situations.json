@@ -251,16 +251,16 @@
         "model": "remy_text_api.situation",
         "pk": 34,
         "fields": {
-            "text": "GOOD ENDING.<br /><br />Game complete.",
-            "location": "Lake Bottom / Game Complete"
+            "text": "...you put your hand up to keep the sun out of your eyes. Remy leans over from the driver's seat and pulls down the sun visor for you—it's just out of your reach. He pulls up to the front of the carpool lane and you hop out. Your backpack feels unnatural after not wearing it for three months. You spare a moment to take one last look at Remy before you head through the front doors of Davis Elementary and he heads back to Lansing. 'I'll see you soon'. <br /><br />Game complete.",
+            "location": "School / Game Complete"
         }
     },
     {
         "model": "remy_text_api.situation",
         "pk": 35,
         "fields": {
-            "text": "BAD ENDING.<br /><br />Game complete.",
-            "location": "Lake Bottom / Game Complete"
+            "text": "...you try to open your eyes but you realize you don't have any. You can feel your fins brushing up against the sides of the other fish around you. The cold doesn't bother you and the circular motion of the school is comforting. You try to remember what Remy had said in that field so long ago while you wait for the next kayak. 'Make Time'. You wonder if you really did.<br /><br />Game complete.",
+            "location": "School / Game Complete"
         }
     },
     {
