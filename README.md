@@ -19,7 +19,7 @@ Tree".
 4. The action text is sent to the back-end server. This string is then broken into individual words, checked to see if the verb and noun match any of the 
 verbs and nouns that are in the database, checked to see if that verb-noun combination is a valid action for the current situation, and then checked to see if that
 action has any other requirements necessary to be completed.
-5. Once an action is completed, the situation for the game is updated and the process starts over. Ex. "You are standing under the tree."
+5. Once an action is completed, the situation for the game is updated, the user is given a new text input, and the process starts over. Ex. "You are standing under the tree."
 
 All text parsing and game updates are completed within the handle_action custom action within the GameView viewset. A detailed docstring on the custom_action describes 
 every step of the process. 
