@@ -3,7 +3,7 @@
 ## About
 Remy is a retro-inspired text-based adventure game. This repo is for the server-side portion of the game. 
 
-A friend recently came to me and asked if I could build himan oldschool text-based adventure to promote an album he has coming out. I had never built anything like 
+A friend recently came to me and asked if I could build him an oldschool text-based adventure to promote an album he has coming out. I had never built anything like 
 this before, so I decided to make my own to see how it could work. The story is one that I came up with based on a memorable dream I had a few years back. 
 
 ## Technologies Used
