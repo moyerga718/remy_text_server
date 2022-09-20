@@ -138,8 +138,8 @@
         "model": "remy_text_api.item",
         "pk": 16,
         "fields": {
-            "name": "Opal",
-            "description": "Large fire opal. Given to you by the child on the road. Feels heavy and significant.",
+            "name": "Egg",
+            "description": "A fine, jeweled egg. Given to you by the child on the road. Encrusted with opals.",
             "starting_item": false
         }
     },
