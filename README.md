@@ -23,9 +23,3 @@ every step of the process.
 
 ### ERD
 ERD Link: https://dbdiagram.io/d/630f78fb0911f91ba508b99a
-
-## How to play:
-This app is deployed on Heroku, so no need to download the repo yourself. You can play it here: 
-https://remy-adventure.herokuapp.com/
-
-I've done a little bit of play testing to make sure game flow is smooth, but I'm always up for critique or input (including other actions, situaitons, etc...). Feel free to contact me with any suggestions!
